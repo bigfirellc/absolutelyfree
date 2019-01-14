@@ -1,3 +1,4 @@
 django
-django-admin
+django-heroku
 psycopg2-binary
+gunicorn
