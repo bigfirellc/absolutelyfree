@@ -25,7 +25,7 @@ SECRET_KEY = 'rd9up&bqz^(-*f39o38ata694)x2%t6ku@$u498e&yja9%!4h*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['acopeland.pythonanywhere.com','0.0.0.0']
+ALLOWED_HOSTS = ['127.0.0.1','acopeland.pythonanywhere.com','0.0.0.0']
 
 
 # Application definition
@@ -76,9 +76,17 @@ WSGI_APPLICATION = 'absolutelyfree.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'absolutelyfree',
+        'USER': 'absolutelyfree',
+        'PASSWORD': 'LUWCeALY6DcWfuM8',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 

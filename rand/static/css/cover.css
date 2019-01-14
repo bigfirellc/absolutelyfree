@@ -2,6 +2,9 @@
  * Globals
  */
 
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+
+
 /* Links */
 a,
 a:focus,
@@ -13,10 +16,11 @@ a:hover {
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  color: #333;
+  color: #fff;
+  font-family: 'Helvetica Neue', serif;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
+  background-color: #cc3300;
+  border: .05rem solid #cc3300;
 }
 
 
@@ -27,7 +31,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #111;
 }
 
 body {
@@ -52,8 +56,8 @@ body {
  */
 
 .cover-heading {
-  color: #C25100;
-  font-family: sans-serif;
+  color: #488c51;
+  font-family: 'Ultra', serif;
 }
 
 .masthead {
@@ -106,6 +110,11 @@ body {
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
+}
+
+.lead{
+  font-family: 'Ultra', serif;
+  font-size: 1.5em;
 }
 
 
