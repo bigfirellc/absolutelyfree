@@ -2,5 +2,5 @@ vnv/
 export/
 .idea/
 /db.sqlite3
-/vnv/
+/vnv/*
 /vnv/lib/python3.7/site-packages/
