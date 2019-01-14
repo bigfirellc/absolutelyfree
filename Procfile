@@ -1,1 +1,1 @@
-web: gunicorn absolutelyfree.wsgi
+web: gunicorn absolutelyfree.wsgi --log-file -

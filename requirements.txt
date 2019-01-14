@@ -1,3 +1,14 @@
-django
+Django
+dj-database-url
+django-admin
+django-excel-response2
 django-heroku
+django-six
+gunicorn
+pip
 psycopg2-binary
+pytz
+screen
+setuptools
+whitenoise
+xlwt
