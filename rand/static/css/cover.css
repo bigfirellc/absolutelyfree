@@ -17,7 +17,7 @@ a:hover {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #fff;
-  font-family: 'Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #F18CF9;
   border: .05rem solid #F18CF9;
@@ -58,11 +58,11 @@ body {
 .cover-heading {
   color: #ffffff;
   text-shadow: 1px 1px 2px black;
-  font-family: 'Ultra', serif;
+  font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 .masthead {
-  font-family: sans-serif;
+  font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
   margin-bottom: 2rem;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .lead{
-  font-family: 'Ultra', serif;
+  font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
   font-size: 1.5em;
   text-shadow: 1px 1px 2px black;
 }
