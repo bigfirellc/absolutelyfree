@@ -17,7 +17,7 @@ a:hover {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #fff;
-  font-family: 'Helvetica Neue', serif;
+  font-family: 'Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #F18CF9;
   border: .05rem solid #F18CF9;
