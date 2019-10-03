@@ -5,8 +5,18 @@
     "description": "very high"
   },
   "detail": {
-    "contributors": [],
-    "diagrams": [],
+    "contributors": [
+      {
+        "name": "bob"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "dia",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
     "reviewer": "adam"
   }
 }
