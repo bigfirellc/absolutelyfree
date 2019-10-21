@@ -60,6 +60,7 @@ body {
   color: #ffffff;
   text-shadow: 1px 1px 2px black;
   font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 1em;
 }
 
 .masthead {
@@ -116,7 +117,7 @@ body {
 
 .lead{
   font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
   text-shadow: 1px 1px 2px black;
 }
 
