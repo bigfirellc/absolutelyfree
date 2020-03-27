@@ -32,15 +32,14 @@
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">THE ABSOLUTELY FREE RANDOM JAM BAND NAME MAKER</h1>
-        <h4 class="cover-heading">JUMBLE EDITION™</h2>
-          {%  if bandjumble %}
-                <p class="lead" style="padding: 1em">{{ bandjumble }}</p>
+        <h1 class="cover-heading">THE ABSOLUTELY FREE RANDOM JAM BAND ALBUM TITLE MAKER</h1>
+          {%  if album_obj %}
+                <p class="lead" style="padding: 1em">{{ album_obj.album_text }}</p>
         {% else %}
             <p class="lead"> No names are available.</p>
         {% endif %}
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary" onclick="location.reload()">Jumble Me!</a>
+        <p class="bead">
+          <a href="#" class="btn btn-lg btn-secondary" onclick="location.reload()">Make Me A Name!</a>
         </p>
       </main>
 
