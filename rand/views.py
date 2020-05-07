@@ -1,17 +1,9 @@
-from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
-from .models import Bandname
+from .models import Bandname, Album
 from django.template import loader
 import random
 
-#def index(request):
- #   latest_bandname_list = Bandname.objects.order_by('-pub_date')[:5]
- #   count = str(Bandname.objects.count())
- #   output =  "The latest 5 band names in the database are: <ul><li>"
- #   output += '<li>'.join([b.bandname_text for b in latest_bandname_list])
- #   output += ".</ul>There is a total of %s entries in the database." % count
- #   return HttpResponse(output)
 
 def index(request):
     template = loader.get_template('rand/index.html')
@@ -22,9 +14,11 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
+
 def getrandname():
     bandobjs = Bandname.objects.all()
     return random.choice(bandobjs)
+
 
 def jumble(request):
 
@@ -44,10 +38,18 @@ def jumble(request):
     return HttpResponse(template.render(context, request))
 
 
-def bandid(request, bandname_id):
-    response = "Band name ID: %s"
-    return HttpResponse(response % bandname_id)
+def getrandalbum():
+    albumobjs = Album.objects.all()
+    return random.choice(albumobjs)
 
-def bandname(request, bandname_id):
-    response = "You're looking at the name of band %s."
-    return HttpResponse(response % bandname_id)
+
+def albums(request):
+
+    template = loader.get_template('rand/album.html')
+
+    album_obj = getrandalbum()
+
+    context = {
+        'album_obj': album_obj,
+    }
+    return HttpResponse(template.render(context, request))
