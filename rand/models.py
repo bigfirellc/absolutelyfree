@@ -10,3 +10,14 @@ class Bandname(models.Model):
 
     def roll_dice(self):
         return self.count()
+
+
+class Album(models.Model):
+    name = models.CharField(max_length=1024, verbose_name="Album Name")
+    pub_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    def roll_dice(self):
+        return self.count()

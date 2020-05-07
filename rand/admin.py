@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import Bandname
+from .models import Album, Bandname
+
+
+class AlbumAdmin(admin.ModelAdmin):
+    date_hierarchy = 'pub_date'
+    search_fields = ['name']
+    list_display = ('name', 'pub_date')
 
 
 class BandnameAdmin(admin.ModelAdmin):
@@ -11,4 +17,5 @@ class BandnameAdmin(admin.ModelAdmin):
 admin.site.site_header = "Absolutely Free"
 admin.site.site_title = "Absolutely Free"
 admin.site.index_title = "Admin"
+admin.site.register(Album, AlbumAdmin)
 admin.site.register(Bandname, BandnameAdmin)

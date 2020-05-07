@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 # Create your views here.
-from .models import Bandname
+from .models import Album, Bandname
 from django.template import loader
 import random
 
@@ -37,8 +37,7 @@ def jumble(request):
     }
     return HttpResponse(template.render(context, request))
 
-'''
-TODO:
+
 def getrandalbum():
     albumobjs = Album.objects.all()
     return random.choice(albumobjs)
@@ -54,4 +53,3 @@ def albums(request):
         'album_obj': album_obj,
     }
     return HttpResponse(template.render(context, request))
-'''
