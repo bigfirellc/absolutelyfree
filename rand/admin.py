@@ -1,14 +1,12 @@
-#from django.contrib import admin
-
-# Register your models here.
-
 from django.contrib import admin
 from .models import Bandname
+
 
 class BandnameAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
     search_fields = ['bandname_text']
     list_display = ('bandname_text', 'pub_date')
+
 
 admin.site.site_header = "Absolutely Free"
 admin.site.site_title = "Absolutely Free"
