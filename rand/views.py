@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-# Create your views here.
+from datetime import datetime
 from .models import Album, Bandname
 from django.template import loader
 import random
@@ -17,6 +17,7 @@ def index(request):
 
 def getrandname():
     bandobjs = Bandname.objects.all()
+    random.seed(datetime.now())
     return random.choice(bandobjs)
 
 
@@ -25,6 +26,7 @@ def jumble(request):
     template = loader.get_template('rand/jumble.html')
 
     bandobjs = Bandname.objects.all()
+    random.seed(datetime.now())
     bandchoices = random.choices(bandobjs, k=2)
     bandjumble = ''
 
@@ -40,6 +42,7 @@ def jumble(request):
 
 def getrandalbum():
     albumobjs = Album.objects.all()
+    random.seed(datetime.now())
     return random.choice(albumobjs)
 
 
