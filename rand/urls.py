@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('jumble/', views.jumble),
-    path('albums/', views.albums)
+    # path('albums/', views.albums)
 ]
