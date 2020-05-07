@@ -6,7 +6,7 @@ class Bandname(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.bandname_text
+        return self.bandname_text.title()
 
     def roll_dice(self):
         return self.count()
@@ -17,7 +17,7 @@ class Album(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
+        return self.name.title()
 
     def roll_dice(self):
         return self.count()
