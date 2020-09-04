@@ -6,7 +6,7 @@ import random
 
 
 def index(request):
-    template = loader.get_template('rand/index.html')
+    template = loader.get_template('band/index.html')
     bandname_obj = getrandname()
 
     context = {
@@ -22,7 +22,7 @@ def getrandname():
 
 def jumble(request):
 
-    template = loader.get_template('rand/jumble.html')
+    template = loader.get_template('band/jumble.html')
 
     bandobjs = Bandname.objects.all()
     bandchoices = random.choices(bandobjs, k=2)
@@ -46,7 +46,7 @@ def getrandalbum():
 
 def albums(request):
 
-    template = loader.get_template('rand/album.html')
+    template = loader.get_template('band/album.html')
 
     album_obj = getrandalbum()
 

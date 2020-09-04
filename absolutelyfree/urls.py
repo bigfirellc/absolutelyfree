@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include,path
 
 urlpatterns = [
-    path('', include('rand.urls')),
+    path('', include('band.urls')),
     path('.well-known/acme-challenge/FbQT1-PsZh4J4AoW6krUXOjej3OmFJ0YP0FIyZ4WKiI',include('well-known.urls')),
     path('admin/', admin.site.urls),
 ]

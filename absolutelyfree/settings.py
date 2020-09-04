@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1','acopeland.pythonanywhere.com','0.0.0.0']
 # Application definition
 
 INSTALLED_APPS = [
-    'rand.apps.RandConfig',
+    'band.apps.BandConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
