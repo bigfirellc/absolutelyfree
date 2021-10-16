@@ -3,7 +3,7 @@ from datetime import datetime
 from .models import Album, Bandname
 from django.template import loader
 import random
-
+from django.views.generic import ListView
 
 def index(request):
     template = loader.get_template('rand/index.html')
@@ -56,3 +56,8 @@ def albums(request):
         'album_obj': album_obj,
     }
     return HttpResponse(template.render(context, request))
+
+
+class SearchResultsView(ListView):
+    model = Bandname
+    template_name = 'rand/search_results.html'
