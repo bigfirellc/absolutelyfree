@@ -34,15 +34,9 @@
 <main role="main" class="inner cover">
   <h1 class="cover-heading">Search Results</h1>
   {% if object_list %}
-    <table>
       {% for band in object_list %}
-          <tr>
-            <td>
-              {{ band.bandname_text }}
-            </td>
-          </tr>
+      <p class="lead" style="padding: 1em">{{ band.bandname_text }}</p>
       {% endfor %}
-    </table>
   {% else %}
       <p class="lead"> No names are available.</p>
   {% endif %}
