@@ -67,6 +67,6 @@ class SearchResultsView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         object_list = Bandname.objects.filter(
-            Q(name__icontains=query) | Q(state__icontains=query)
+            Q(bandname_text__icontains=query)
         )
         return object_list
