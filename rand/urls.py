@@ -7,5 +7,5 @@ urlpatterns = [
     path('jumble/', views.jumble),
     path('album/', views.albums),
     path('results/', views.SearchResultsView.as_view(), name='search_results'),
-    path('search/', SearchPageView.as_view(), name='search')
+    path('search/', views.SearchPageView.as_view(), name='search')
 ]
