@@ -59,7 +59,7 @@ def albums(request):
     return HttpResponse(template.render(context, request))
 
 class SearchPageView(TemplateView):
-    template_name = 'search.html'
+    template_name = 'rand/search.html'
 
 class SearchResultsView(ListView):
     model = Bandname
