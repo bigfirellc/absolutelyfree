@@ -57,7 +57,15 @@ def albums(request):
     }
     return HttpResponse(template.render(context, request))
 
+class SearchPageView(TemplateView):
+    template_name = 'search.html'
 
 class SearchResultsView(ListView):
     model = Bandname
     template_name = 'rand/search_results.html'
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Bandname.objects.filter(
+            Q(name__icontains=query) | Q(state__icontains=query)
+        )
+        return object_list
