@@ -4,6 +4,7 @@ from .models import Album, Bandname
 from django.template import loader
 import random
 from django.views.generic import ListView, TemplateView
+from django.db.models import Q
 
 def index(request):
     template = loader.get_template('rand/index.html')
