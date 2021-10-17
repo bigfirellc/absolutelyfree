@@ -3,7 +3,7 @@ from datetime import datetime
 from .models import Album, Bandname
 from django.template import loader
 import random
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 
 def index(request):
     template = loader.get_template('rand/index.html')
