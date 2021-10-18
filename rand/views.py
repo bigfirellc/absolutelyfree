@@ -67,7 +67,7 @@ class SearchResultsView(ListView):
     def get_queryset(self):
         query = self.request.GET.get('q')
         if not query:
-            query = '0'
+            query = '10dc303535874aeccc86a8251e6992f5'  # a random md5sum
         object_list = Bandname.objects.filter(
             Q(bandname_text__icontains=query)
         )
