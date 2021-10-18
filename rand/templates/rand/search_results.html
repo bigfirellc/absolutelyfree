@@ -35,9 +35,7 @@
 <main role="main" class="inner cover">
   <h1 class="cover-heading">THE ABSOLUTELY FREE RANDOM JAM BAND NAME MAKER</h1>
 
-  <h1 class="margin-top: 1em; cover-heading">SEARCH RESULTS</h1>
-
-  {% if object_list %}
+ {% if object_list %}
       {% for band in object_list %}
       <p class="result" style="padding: 0em">{{ band.bandname_text }}</p>
       {% endfor %}
