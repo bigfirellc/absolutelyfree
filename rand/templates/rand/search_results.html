@@ -37,10 +37,10 @@
 
   {% if object_list %}
       {% for band in object_list %}
-      <p class="lead" style="padding: 0em">{{ band.bandname_text }}</p>
+      <p class="result" style="padding: 0em">{{ band.bandname_text }}</p>
       {% endfor %}
   {% else %}
-      <p class="lead"> No names are available.</p>
+      <p class="result"> No names are available.</p>
   {% endif %}
 
 
