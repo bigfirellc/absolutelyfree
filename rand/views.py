@@ -65,8 +65,9 @@ class SearchResultsView(ListView):
     model = Bandname
     template_name = 'rand/search_results.html'
     def get_queryset(self):
-        query = ''
         query = self.request.GET.get('q')
+        if not query:
+            query = '0'
         object_list = Bandname.objects.filter(
             Q(bandname_text__icontains=query)
         )
