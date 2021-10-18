@@ -35,7 +35,7 @@
 <main role="main" class="inner cover">
   <h1 class="cover-heading">THE ABSOLUTELY FREE RANDOM JAM BAND NAME MAKER</h1>
 
-  <h1 class="lead">SEARCH RESULTS</h1>
+  <h1 class="margin-top: 1em; cover-heading">SEARCH RESULTS</h1>
 
   {% if object_list %}
       {% for band in object_list %}
@@ -46,11 +46,14 @@
   {% endif %}
 
 
-  <h1 class="cover-heading">SEARCH</h1>
+  <h1 class="margin-top: 1em; cover-heading">SEARCH</h1>
   <form action="{% url 'search_results' %}" method="get">
     <input name="q" type="text" placeholder="Search"/>
   </form>
   
+  <p class="lead">
+    <a href="#" class="btn btn-lg btn-secondary" onclick="location.reload()">Search!</a>
+  </p>
 
 </main>
 
