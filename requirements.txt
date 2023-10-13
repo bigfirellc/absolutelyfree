@@ -3,6 +3,7 @@ dj-database-url
 django-admin
 django-baton
 django-excel-response2
+django-import-export
 django-heroku
 django-six
 gunicorn
