@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+dj-database-url = "*"
+django-admin = "*"
+django-baton = "*"
+django-excel-response2 = "*"
+django-heroku = "*"
+django-six = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+pytz = "*"
+screen = "*"
+whitenoise = "*"
+xlwt = "*"
+django-import-export = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

@@ -13,3 +13,4 @@ screen
 setuptools
 whitenoise
 xlwt
+django-import-export
