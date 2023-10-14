@@ -3,3 +3,5 @@ export/
 /db.sqlite3
 __pycache__/
 *.pyc
+*.icloud
+.DS_Store
