@@ -1,14 +1,16 @@
 from django.contrib import admin
-from .models import Album, Bandname
+from .models import Album, Bandname, AlbumResource, BandnameResource
+from import_export.admin import ImportExportModelAdmin
 
-
-class AlbumAdmin(admin.ModelAdmin):
+class AlbumAdmin(ImportExportModelAdmin):        
+    resource_classes = [AlbumResource]
     date_hierarchy = 'pub_date'
     search_fields = ['name']
     list_display = ('name', 'pub_date')
 
 
-class BandnameAdmin(admin.ModelAdmin):
+class BandnameAdmin(ImportExportModelAdmin):
+    resource_classes = [BandnameResource]
     date_hierarchy = 'pub_date'
     search_fields = ['bandname_text']
     list_display = ('bandname_text', 'pub_date')

@@ -1,4 +1,5 @@
 from django.db import models
+from import_export import fields, resources
 
 
 class Bandname(models.Model):
@@ -21,3 +22,19 @@ class Album(models.Model):
 
     def roll_dice(self):
         return self.count()
+
+
+class AlbumResource(resources.ModelResource):
+
+    class Meta:
+        model = Album
+        import_id_fields = ('id',)
+        fields = ('name', 'pub_date')
+
+
+class BandnameResource(resources.ModelResource):
+
+    class Meta:
+        model = Bandname
+        import_id_fields = ('id',)
+        fields = ('bandname_text', 'pub_date')
