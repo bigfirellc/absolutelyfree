@@ -37,3 +37,4 @@ gevent
 google-api-python-client==1.4.1
 FeedParser
 django-environ
+gunicorn
