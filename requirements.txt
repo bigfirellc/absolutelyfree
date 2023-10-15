@@ -37,4 +37,4 @@ FeedParser
 django-environ
 gunicorn
 django-jet-reboot
-
+whitenoise
