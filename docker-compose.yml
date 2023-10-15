@@ -3,8 +3,8 @@ version: '3.8'
 services:
   absolutelyfree:
     build:
-      context: ./absolutelyfree
-      dockerfile: Dockerfile.prod
+      context: .
+      dockerfile: ./Dockerfile
     command: gunicorn absolutelyfree.wsgi:application --bind 0.0.0.0:8000
     ports:
       - 8000:8000

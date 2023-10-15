@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM python:3.11.5-slim-buster as builder
+FROM python:3.11.4-slim-buster as builder
 
 # set work directory
 WORKDIR /app/absolutelyfree
@@ -14,7 +14,7 @@ ENV PYTHONUNBUFFERED 1
 
 # install system dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends gcc
+    apt-get install -y --no-install-recommends gcc libc6-dev
 
 # lint
 RUN pip install --upgrade pip
@@ -30,7 +30,7 @@ RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r
 #########
 
 # pull official base image
-FROM python:3.11.5-slim-buster
+FROM python:3.11.4-slim-buster
 
 # create directory for the app user
 RUN mkdir -p /home/app
@@ -45,7 +45,7 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 # install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends netcat
+RUN apt-get update 
 COPY --from=builder /app/absolutelyfree/wheels /wheels
 COPY --from=builder /app/absolutelyfree/requirements.txt .
 RUN pip install --upgrade pip
