@@ -168,3 +168,15 @@ JET_THEMES = [
         'title': 'Light Gray'
     }
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://www.absolutelyfree.net'
+],
+ALLOWED_HOSTS = [
+    'localhost', 
+],
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+    'https://www.absolutelyfree.net'
+]
