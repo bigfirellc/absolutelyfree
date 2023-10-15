@@ -30,7 +30,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'absolutelyfree.net', 'www.absolutelyfree.net'] 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'absolutelyfree.net', 'www.absolutelyfree.net']
 
 # Application definition
 
@@ -172,13 +172,5 @@ JET_THEMES = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000',
-    'https://www.absolutelyfree.net'
-],
-ALLOWED_HOSTS = [
-    'localhost', 
-],
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000',
     'https://www.absolutelyfree.net'
 ]
