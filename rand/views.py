@@ -18,7 +18,7 @@ def index(request):
 
 def getrandname():
     bandobjs = Bandname.objects.all()
-    random.seed(datetime.now())
+    random.seed(datetime.now().timestamp())
     return random.choice(bandobjs)
 
 
@@ -27,7 +27,7 @@ def jumble(request):
     template = loader.get_template('rand/jumble.html')
 
     bandobjs = Bandname.objects.all()
-    random.seed(datetime.now())
+    random.seed(datetime.now().timestamp())
     bandchoices = random.choices(bandobjs, k=2)
     bandjumble = ''
 
@@ -43,7 +43,7 @@ def jumble(request):
 
 def getrandalbum():
     albumobjs = Album.objects.all()
-    random.seed(datetime.now())
+    random.seed(datetime.now().timestamp())
     return random.choice(albumobjs)
 
 
