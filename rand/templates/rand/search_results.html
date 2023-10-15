@@ -37,14 +37,14 @@
 
  {% if object_list.count > 0 %}
       {% for band in object_list %}
-      <p class="result" style="padding: 0em">{{ band.bandname_text }}</p>
+      <p class="result" style="padding: 0em; margin:0em">{{ band.bandname_text }}</p>
       {% endfor %}
   {% else %}
       <p class="result"> No names are available.</p>
   {% endif %}
 
   <form action="{% url 'search_results' %}" method="get">
-    <input name="q" type="text" placeholder="Search"/>
+    <input name="q" type="text" style="margin:1em" placeholder="Search"/>
   </form>
   
   <p class="lead">

@@ -61,7 +61,7 @@ body {
   color: #ffffff;
   text-shadow: 1px 1px 2px black;
   font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 h4.cover-heading {
@@ -70,7 +70,7 @@ h4.cover-heading {
 
 .masthead {
   font-family: 'Ultra','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .masthead-brand {
@@ -105,7 +105,7 @@ h4.cover-heading {
     float: left;
   }
   .nav-masthead {
-    float: right;
+    float: center;
   }
 }
 
@@ -123,14 +123,14 @@ h4.cover-heading {
 
 .lead{
   font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 1em;
   font-weight: bold;
   text-shadow: 2px 2px 4px black;
 }
 
 .result{
   font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   text-shadow: 2px 2px 4px black;
 }
