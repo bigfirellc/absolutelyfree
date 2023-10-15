@@ -19,5 +19,7 @@ from django.urls import include,path
 urlpatterns = [
     path('', include('rand.urls')),
     #path('.well-known/acme-challenge/FbQT1-PsZh4J4AoW6krUXOjej3OmFJ0YP0FIyZ4WKiI',include('well-known.urls')),
+    path('jet/', include('jet.urls', 'jet')),
+    path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS        
     path('admin/', admin.site.urls),
 ]
