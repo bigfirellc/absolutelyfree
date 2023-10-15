@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 *.icloud
 .DS_Store
+.env
