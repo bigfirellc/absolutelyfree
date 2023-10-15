@@ -1,10 +1,14 @@
-from django.http import HttpResponse
-from datetime import datetime
-from .models import Album, Bandname
-from django.template import loader
+"""views.py
+
+"""
 import random
+from datetime import datetime
+from django.http import HttpResponse
+from django.template import loader
 from django.views.generic import ListView, TemplateView
 from django.db.models import Q
+from .models import Album, Bandname
+
 
 def index(request):
     template = loader.get_template('rand/index.html')
@@ -58,8 +62,10 @@ def albums(request):
     }
     return HttpResponse(template.render(context, request))
 
+
 class SearchPageView(TemplateView):
     template_name = 'rand/search.html'
+
 
 class SearchResultsView(ListView):
     model = Bandname
