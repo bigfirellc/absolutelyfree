@@ -29,7 +29,7 @@ class AlbumResource(resources.ModelResource):
     class Meta:
         model = Album
         import_id_fields = ('id',)
-        fields = ('name', 'pub_date')
+        fields = ('id', 'name', 'pub_date')
 
 
 class BandnameResource(resources.ModelResource):
@@ -37,4 +37,4 @@ class BandnameResource(resources.ModelResource):
     class Meta:
         model = Bandname
         import_id_fields = ('id',)
-        fields = ('bandname_text', 'pub_date')
+        fields = ('id', 'bandname_text', 'pub_date')
