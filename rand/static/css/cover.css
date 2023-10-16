@@ -68,7 +68,7 @@ body {
 }
 
 .heading {
-  font-size: large;
+  font-size: x-large;
   color: #F18CF9;
   text-shadow: 1px 1px 2px black;
   font-family: 'Pixelify Sans','Helvetica Neue', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
@@ -130,7 +130,7 @@ body {
 
 .lead{
   font-family: 'Pixelify Sans', "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   font-weight: bold;
   text-shadow: 2px 2px 4px black;
 }
