@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import Album, Bandname, AlbumResource, BandnameResource
 from import_export.admin import ImportExportModelAdmin
+from django.utils.translation import gettext_lazy as _
+
 
 class AlbumAdmin(ImportExportModelAdmin):        
     resource_classes = [AlbumResource]

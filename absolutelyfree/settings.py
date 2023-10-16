@@ -132,3 +132,5 @@ JET_THEMES = [
 CSRF_TRUSTED_ORIGINS = [
     'https://www.absolutelyfree.net'
 ]
+
+JET_MODULE_GOOGLE_ANALYTICS_CLIENT_SECRETS_FILE = os.path.join(BASE_DIR, 'client_secrets.json')
