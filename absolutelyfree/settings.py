@@ -15,7 +15,7 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'absolutelyfree.net', 'www.absolutelyfree.net']
 
 INSTALLED_APPS = [
-    'rand.apps.RandConfig',
+    'rand.apps.BandConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

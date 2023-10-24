@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class RandConfig(AppConfig):
+class BandConfig(AppConfig):
     name = 'rand'
