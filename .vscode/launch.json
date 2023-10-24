@@ -9,11 +9,59 @@
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
+            "console": "integratedTerminal",
             "args": [
-                "runserver"
+                "runserver",
+                "--noreload",
+                "--nothreading"
+            ],
+            "django": true
+        },
+        {
+            "name": "Make Migrations",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "makemigrations"
             ],
             "django": true,
             "justMyCode": true
-        }
+        },
+        {
+            "name": "Migrate",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true,
+            "justMyCode": true
+        },
+        {
+            "name": "Collect Static",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "collectstatic",
+                "--noinput",
+                "--clear"
+            ],
+            "django": true,
+            "justMyCode": true
+        },        
+        {
+            "name": "Find Static",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "findstatic"
+            ],
+            "django": true,
+            "justMyCode": true
+        },             
     ]
 }
