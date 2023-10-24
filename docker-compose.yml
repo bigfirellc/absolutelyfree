@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  absolutelyfree:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: gunicorn absolutelyfree.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    depends_on:
+      - absolutelyfreedb
+
+  absolutelyfreedb:
+    image: postgres:15
+    volumes:
+      - /data/absolutelyfree/postgresql:/var/lib/postgresql/data/
+    env_file:
+      - ./.env

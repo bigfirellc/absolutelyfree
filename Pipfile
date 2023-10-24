@@ -1,0 +1,48 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pipreqs = "*"
+asgiref = "*"
+boto3 = "*"
+defusedxml = "*"
+diff-match-patch = "*"
+dj-database-url = "*"
+django = "*"
+django-admin = "*"
+django-environ = "*"
+django-excel-response2 = "*"
+django-import-export = "*"
+django-six = "*"
+django-storages = "*"
+et-xmlfile = "*"
+excel-base = "*"
+gevent = "*"
+greenlet = "*"
+gunicorn = "*"
+isoweek = "*"
+markuppy = "*"
+odfpy = "*"
+openpyxl = "*"
+packaging = "*"
+pillow = "*"
+psycopg2-binary = "*"
+python-dateutil = "*"
+pytz = "*"
+pyyaml = "*"
+screen = "*"
+six = "*"
+sqlparse = "*"
+tablib = "*"
+timeconvert = "*"
+typing-extensions = "*"
+tzlocal = "*"
+xlrd = "*"
+xlwt = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
