@@ -57,14 +57,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'absolutelyfree.wsgi.application'
 
-DATABASES = {
+USE_POSTGRES = os.getenv('USE_POSTGRES') == 'TRUE'
+
+if USE_POSTGRES:
+    DATABASES = {
+        'default': {
+            'ENGINE': env("DATABASE_ENGINE"),
+            'NAME': env("DATABASE_NAME"),
+            'USER': env("DATABASE_USER"),
+            'PASSWORD': env("DATABASE_PASSWORD"),
+            'HOST': env("DATABASE_HOST"),
+            'PORT': env("DATABASE_PORT"),
+        }
+    }
+else:
+    DATABASES = {
     'default': {
-        'ENGINE': env("DATABASE_ENGINE"),
-        'NAME': env("DATABASE_NAME"),
-        'USER': env("DATABASE_USER"),
-        'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABASE_HOST"),
-        'PORT': env("DATABASE_PORT"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'absolutelyfree.sqlite', 
     }
 }
 
