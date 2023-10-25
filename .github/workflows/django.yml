@@ -10,7 +10,7 @@ env:
       SECRET_KEY: 5d+hngv=)(xd@qt3swsota_y!=2r-r%h5c_=t$v%o0d&$_cpig
       DEBUG: TRUE
       USE_S3: FALSE
-      
+
 jobs:
   build:
 
@@ -33,3 +33,5 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py check
+        python manage.py makemigrations
+        python manage.py migrate
