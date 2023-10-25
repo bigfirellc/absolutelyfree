@@ -74,7 +74,7 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'absolutelyfree', 
+        'NAME': 'absolutelyfree.sqlite', 
     }
 }
 
