@@ -28,15 +28,26 @@ def getrandname():
 
 def jumble(request):
     template = loader.get_template("rand/jumble.html")
+    stopwords_back = ['or', 'and', 'the', 'a', 'of']
+    stopwords_front = ['a', 'and', 'or', 'of']
 
-    bandobjs = Bandname.objects.all()
-    random.seed(datetime.now().timestamp())
-    bandchoices = random.choices(bandobjs, k=2)
-    bandjumble = ""
+    goodphrase = False
 
-    for band in bandchoices:
-        bandsplit = band.bandname_text.split(" ", 2)
-        bandjumble += random.choice(bandsplit) + " "
+    while goodphrase == False:
+        bandobjs = Bandname.objects.all()
+        random.seed(datetime.now().timestamp())
+        bandchoices = random.choices(bandobjs, k=2)
+        phraselist = []
+
+        for band in bandchoices:
+            bandsplit = band.bandname_text.split(" ", 2)
+            phraselist.append(random.choice(bandsplit))
+        
+        if phraselist[-1].lower() in stopwords_back or phraselist[0].lower() in stopwords_front:
+            goodphrase = False
+        else:
+            goodphrase = True
+            bandjumble = ' '.join(phraselist)
 
     context = {
         "bandjumble": bandjumble,
