@@ -18,7 +18,7 @@ RUN pip install --upgrade pip
 
 # set work directory
 WORKDIR /app/absolutelyfree
-COPY . .
+COPY requirements.txt .
 
 # install python dependencies
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r /app/absolutelyfree/requirements.txt
