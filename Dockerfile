@@ -16,9 +16,7 @@ RUN apt-get update && \
 # lint
 RUN pip install --upgrade pip
 
-# set work directory
-WORKDIR /app/absolutelyfree
-COPY ./requirements.txt .
+COPY . /app/absolutelyfree/
 
 # install python dependencies
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r /app/absolutelyfree/requirements.txt
