@@ -1,20 +1,24 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile {
+            filename 'Dockerfile'
+            dir 'build'
+            label 'absolutelyfree'
+        }
+    }   
     stages {
-        stage('Build') {
-            steps {
-                sh 'docker compose build absolutelyfree'
-            }
-        }
         stage('Test') {
+            environment { 
+                SECRET_KEY = '5d+hngv=)(xd@qt3swsota_y!=2r-r%h5c_=t$v%o0d&$_cpig'
+                DEBUG = 'TRUE'
+                USE_S3 = 'FALSE'
+            }            
             steps {
-                sh 'docker compose run absolutelyfree python manage.py test'
+                sh 'python manage.py check'
+                sh 'python manage.py makemigrations'
+                sh 'python manage.py migrate'
+                sh 'python manage.py test'
             } 
-        }
-        stage('Run') {
-            steps {
-                sh 'docker compose up -d absolutelyfree'
-            } 
-        }            
+        }        
     }
 }
