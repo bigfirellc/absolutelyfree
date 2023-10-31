@@ -21,8 +21,7 @@ RUN pip install --upgrade pip
 COPY . /app/absolutelyfree/
 
 # install python dependencies
-COPY ./requirements.txt .
-RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r requirements.txt
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r /app/absolutelyfree/requirements.txt
 
 
 #########
