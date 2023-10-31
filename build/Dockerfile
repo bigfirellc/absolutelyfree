@@ -5,9 +5,6 @@
 # pull official base image
 FROM python:3.11.4-slim-buster as builder
 
-# set work directory
-WORKDIR /app/absolutelyfree
-
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -18,7 +15,10 @@ RUN apt-get update && \
 
 # lint
 RUN pip install --upgrade pip
-COPY . /app/absolutelyfree/
+
+# set work directory
+WORKDIR /app/absolutelyfree
+COPY . .
 
 # install python dependencies
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/absolutelyfree/wheels -r /app/absolutelyfree/requirements.txt
