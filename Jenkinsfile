@@ -3,7 +3,6 @@ pipeline {
         dockerfile {
             filename 'Dockerfile'
             dir 'build'
-            label 'absolutelyfree'
         }
     }   
     stages {
